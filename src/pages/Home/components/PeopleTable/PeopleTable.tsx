@@ -21,9 +21,8 @@ const PeopleTable: React.FC<PeopleTableProps> = () => {
 	const filterPerson = (person: Person) => favoritePeople.filter(p => p.id !== person.id);
 
 	const handleChange = (person: Person) => {
-		console.log(person);
 		const filteredPeople = findPerson(person) ? filterPerson(person) : [...selectedPeople, person];
-		dispatch(addFavorite(filteredPeople))
+		dispatch(addFavorite(filteredPeople)) //addFavorite(newArray)  ->  "type: favorite/addFavorite", payload: []
 		setSelectedPeople(filteredPeople);
 	}
 

@@ -13,7 +13,7 @@ export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState: initialStateTest(),
   reducers: {
-    addFavorite: (state, action) => {
+    addFavorite: (state, action) => { // "type: 'favorite/addFavorite ', payload: [...state, objeto] "
       setLocalStorage(localStorageType.FAVORITES, action.payload)
       return action.payload;
     },

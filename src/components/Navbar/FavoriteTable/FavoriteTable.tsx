@@ -1,11 +1,11 @@
+import { Person } from '@/models';
+import { removeFavoriteByPersonId } from '@/redux/states';
 import { AppStore } from '@/redux/store';
+import { Delete } from '@mui/icons-material';
 import { IconButton } from '@mui/material';
 import { DataGrid, GridRenderCellParams } from '@mui/x-data-grid';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Delete } from '@mui/icons-material';
-import { removeFavoriteByPersonId } from '@/redux/states';
-import { Person } from '@/models';
 
 export type FavoriteTableProps = {
 	// types...
